@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Wedding Hideaki!</title>
+    <!-- Google Fonts for a modern look -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Noto+Sans+JP:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Hero Section (Video Background) -->
+    <header class="hero" id="home">
+        <!-- YouTube Embed Container -->
+        <div class="video-container">
+            <iframe
+                src="https://www.youtube.com/embed/LR61EDoLuos?autoplay=1&mute=1&loop=1&playlist=LR61EDoLuos&controls=0&showinfo=0&rel=0"
+                frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+
+        <div class="hero-content fade-in">
+            <h1 class="glitch" data-text="HAPPY WEDDING">HAPPY WEDDING</h1>
+            <h2 class="hero-name">HIDEAKI</h2>
+            <p class="hero-date">2026</p>
+            <a href="#messages" class="scroll-btn">Scroll Down<span>&#8595;</span></a>
+        </div>
+        <!-- Animated Particles overlay -->
+        <div id="particles-js"></div>
+    </header>
+
+    <!-- Messages Section -->
+    <section class="messages-section section-padding" id="messages">
+        <div class="container">
+            <h2 class="section-title reveal">Messages from Friends</h2>
+
+            <div class="messages-grid">
+                <!-- Message Card 1 -->
+                <div class="message-card reveal">
+                    <p class="message-text">"結婚おめでとう！末長くお幸せに。落ち着いたらまたみんなで飲みに行こう！"</p>
+                    <p class="message-author">- 友人A</p>
+                </div>
+
+                <!-- Message Card 2 -->
+                <div class="message-card reveal" style="transition-delay: 0.1s;">
+                    <p class="message-text">"ハッピーウェディング！いつも助けてくれてありがとう。素敵な家庭を築いてね！"</p>
+                    <p class="message-author">- 友人B</p>
+                </div>
+
+                <!-- Message Card 3 -->
+                <div class="message-card reveal" style="transition-delay: 0.2s;">
+                    <p class="message-text">"ヒデアキ、結婚おめでとう！！これからの二人の人生が素晴らしいものでありますように！"</p>
+                    <p class="message-author">- 友人C</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery-section section-padding" id="gallery">
+        <div class="container">
+            <h2 class="section-title reveal">Memories</h2>
+            <div class="gallery-grid" id="gallery-container">
+                <!-- Images will be injected here via JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026. Happy Wedding Hideaki.</p>
+    </footer>
+
+    <!-- Particles.js for cool background effects -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
