@@ -18,9 +18,12 @@
 
     <!-- Hero Section (Video Background) -->
     <header class="hero" id="home">
-        <!-- Slideshow Container -->
-        <div class="slideshow-container" id="hero-slideshow">
-            <!-- Images will be injected here via JS -->
+        <!-- YouTube Background (User will replace YOUR_VIDEO_ID) -->
+        <div class="video-container">
+            <!-- Replace YOUR_VIDEO_ID with the final YouTube ID of the slideshow video -->
+            <iframe
+                src="https://www.youtube.com/embed/YOUR_VIDEO_ID?autoplay=1&mute=1&loop=1&playlist=YOUR_VIDEO_ID&controls=0&showinfo=0&rel=0"
+                frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
         </div>
 
         <div class="hero-content fade-in">
@@ -36,7 +39,7 @@
     <!-- Special Video Section -->
     <section class="video-section section-padding" id="special-movie">
         <div class="container">
-            <h2 class="section-title reveal">Special Movie</h2>
+            <h2 class="section-title reveal">秀明の生い立ちムービー</h2>
             <div class="video-wrapper reveal">
                 <!-- Using the provided YouTube Link, with controls enabled -->
                 <iframe src="https://www.youtube.com/embed/LR61EDoLuos?rel=0" frameborder="0"
@@ -74,15 +77,7 @@
         </div>
     </section>
 
-    <!-- Gallery Section -->
-    <section class="gallery-section section-padding" id="gallery">
-        <div class="container">
-            <h2 class="section-title reveal">Memories</h2>
-            <div class="gallery-grid" id="gallery-container">
-                <!-- Images will be injected here via JavaScript -->
-            </div>
-        </div>
-    </section>
+    <!-- Gallery Section Removed as per request -->
 
     <footer>
         <p>&copy; 2026. Happy Wedding Hideaki.</p>
