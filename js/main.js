@@ -106,22 +106,58 @@ document.addEventListener('DOMContentLoaded', () => {
         "retina_detect": true
     });
 
-    // 1.5 Load Hero Slideshow
+    // 1.5 Load Hero Slideshow and Gallery
     const heroSlideshow = document.getElementById('hero-slideshow');
-    const slideshowImages = [
-        "2013-12-31 10.38.41.jpg",
+    const galleryContainer = document.getElementById('gallery-container');
+
+    // Complete list of all images in the assets folder
+    const allImages = [
+        "2015-01-12 11.54.48.jpg",
+        "20211231_173444.jpg",
+        "20220101_000147.jpg",
+        "20230610_184331.jpg",
+        "587307803.267969.jpg",
         "DSC02878.JPG",
+        "DSC_0022.jpg",
+        "DSC_0068.JPG",
+        "DSC_0072.JPG",
+        "DSC_0824.jpg",
+        "DSC_1490.jpg",
         "GRL_0068.JPG",
+        "IMG_3224.JPG",
+        "IMG_3253.JPG",
         "KC3R0017.JPG",
         "LINE_ALBUM_20241022_260228_1.jpg",
-        "LINE_ALBUM_20241022_260228_10.jpg"
+        "LINE_ALBUM_20241022_260228_10.jpg",
+        "LINE_ALBUM_20241022_260228_11.jpg",
+        "LINE_ALBUM_20241022_260228_12.jpg",
+        "LINE_ALBUM_20241022_260228_13.jpg",
+        "LINE_ALBUM_20241022_260228_14.jpg",
+        "LINE_ALBUM_20241022_260228_15.jpg",
+        "LINE_ALBUM_20241022_260228_16.jpg",
+        "LINE_ALBUM_20241022_260228_17.jpg",
+        "LINE_ALBUM_20241022_260228_2.jpg",
+        "LINE_ALBUM_20241022_260228_3.jpg",
+        "LINE_ALBUM_20241022_260228_4.jpg",
+        "LINE_ALBUM_20241022_260228_5.jpg",
+        "LINE_ALBUM_20241022_260228_6.jpg",
+        "LINE_ALBUM_20241022_260228_7.jpg",
+        "LINE_ALBUM_20241022_260228_8.jpg",
+        "LINE_ALBUM_20241022_260228_9.jpg",
+        "P_20160813_213453.jpg",
+        "P_20160813_213500.jpg",
+        "長野・静岡旅行_181013_0004.jpg"
     ];
 
+    // Setup Slideshow
     if (heroSlideshow) {
         let currentSlide = 0;
         const slides = [];
 
-        slideshowImages.forEach((file, index) => {
+        // Shuffle images for slideshow so it's different every load
+        const shuffledImages = [...allImages].sort(() => 0.5 - Math.random());
+
+        shuffledImages.forEach((file, index) => {
             const slide = document.createElement('div');
             slide.className = 'slideshow-slide' + (index === 0 ? ' active' : '');
             slide.style.backgroundImage = `url('assets/${file}')`;
@@ -139,40 +175,23 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // 2. Load Gallery Images
-    const galleryContainer = document.getElementById('gallery-container');
-    // List of images from the assets folder. In a real app with a backend, we might fetch this list.
-    // Since this is static, we hardcode the known filenames.
-    const imageFiles = [
-        "2013-12-31 10.38.41.jpg",
-        "DSC02878.JPG",
-        "GRL_0068.JPG",
-        "KC3R0017.JPG",
-        "LINE_ALBUM_20241022_260228_1.jpg",
-        "LINE_ALBUM_20241022_260228_2.jpg",
-        "LINE_ALBUM_20241022_260228_3.jpg",
-        "LINE_ALBUM_20241022_260228_4.jpg",
-        "LINE_ALBUM_20241022_260228_6.jpg",
-        "LINE_ALBUM_20241022_260228_7.jpg",
-        "LINE_ALBUM_20241022_260228_8.jpg",
-        "LINE_ALBUM_20241022_260228_9.jpg",
-        "LINE_ALBUM_20241022_260228_10.jpg"
-    ];
+    if (galleryContainer) {
+        allImages.forEach((file, index) => {
+            const item = document.createElement('div');
+            item.className = 'gallery-item reveal';
+            // Add staggered delay for nice load effect
+            item.style.transitionDelay = `${(index % 4) * 0.1}s`;
 
-    imageFiles.forEach((file, index) => {
-        const item = document.createElement('div');
-        item.className = 'gallery-item reveal';
-        // Add staggered delay for nice load effect
-        item.style.transitionDelay = `${(index % 4) * 0.1}s`;
+            const img = document.createElement('img');
+            img.src = `assets/${file}`;
+            img.alt = `Memory ${index + 1}`;
+            // Basic error handling in case a file is missing
+            img.onerror = () => { item.style.display = 'none'; };
 
-        const img = document.createElement('img');
-        img.src = `assets/${file}`;
-        img.alt = `Memory ${index + 1}`;
-        // Basic error handling in case a file is missing
-        img.onerror = () => { item.style.display = 'none'; };
-
-        item.appendChild(img);
-        galleryContainer.appendChild(item);
-    });
+            item.appendChild(img);
+            galleryContainer.appendChild(item);
+        });
+    }
 
 
     // 3. Scroll Reveal Animation Logic
