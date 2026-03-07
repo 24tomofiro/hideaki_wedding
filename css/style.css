@@ -343,12 +343,15 @@ h3 {
   font-size: 0.8rem;
   color: rgba(255, 255, 255, 0.5);
   margin-top: 15px;
-  transition: var(--transition);
 }
 
-.message-card.expanded .expand-hint {
+.expand-hint .arrow {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.message-card.expanded .expand-hint .arrow {
   transform: rotate(180deg);
-  text-align: left;
 }
 
 /* --- Gallery styles removed --- */
