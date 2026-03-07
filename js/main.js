@@ -123,32 +123,4 @@ document.addEventListener('DOMContentLoaded', () => {
     // Trigger reveal on scroll and initial load
     window.addEventListener("scroll", reveal);
     reveal();
-
-    // 3. YouTube Autoplay on Scroll Logic
-    const specialMovieWrapper = document.querySelector('#special-movie .video-wrapper');
-    const specialMovieIframe = document.getElementById('special-movie-iframe');
-
-    if (specialMovieWrapper && specialMovieIframe) {
-        let isVideoPlaying = false;
-
-        const videoObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    if (!isVideoPlaying) {
-                        // Play video via YouTube API postMessage
-                        specialMovieIframe.contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
-                        isVideoPlaying = true;
-                    }
-                } else {
-                    if (isVideoPlaying) {
-                        // Pause video when out of view
-                        specialMovieIframe.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
-                        isVideoPlaying = false;
-                    }
-                }
-            });
-        }, { threshold: 0.3 }); // Trigger when 30% of the video is visible
-
-        videoObserver.observe(specialMovieWrapper);
-    }
 });
