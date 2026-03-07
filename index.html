@@ -57,180 +57,115 @@
             <h2 class="section-title reveal">Messages from Friends</h2>
 
             <div class="messages-grid">
-                <!-- Message Card 1 (Sample from User) -->
-                <div class="message-card reveal">
-                    <div class="friend-profile">
-                        <h3 class="friend-name">早瀬友洋</h3>
-                        <table class="friend-details">
-                            <tr>
-                                <th>総評</th>
-                                <td>コソコソ会ってる関係</td>
-                            </tr>
-                            <tr>
-                                <th>友好度</th>
-                                <td class="stars">★★★★★</td>
-                            </tr>
-                            <tr>
-                                <th>最終連絡</th>
-                                <td>
-                                    <span class="contact-date">2023.02.18</span>
-                                    <span class="contact-note">多分岩手でひでと遊んだであろうLINE</span>
-                                </td>
-                            </tr>
-                        </table>
+                 <!-- Message Card 1 -->
+                <div class="message-card reveal" onclick="this.classList.toggle('expanded')">
+                    <div class="message-summary">
+                        <p class="message-text">"人生であと５回くらいしか会わないと思うけど、今後もよろしく！"</p>
+                        <p class="message-author">- 早瀬友洋</p>
+                        <span class="expand-hint">▼ tap to see profile</span>
                     </div>
-                    <div class="friend-message">
-                        <p>「人生であと５回くらいしか会わないと思うけど、今後もよろしく！」</p>
+                    <div class="friend-profile-content">
+                        <table class="friend-details">
+                            <tr><th>総評</th><td>コソコソ会ってる関係</td></tr>
+                            <tr><th>友好度</th><td class="stars">★★★★★</td></tr>
+                            <tr><th>最終連絡</th><td><span class="contact-date">2023.02.18</span><span class="contact-note">多分岩手でひでと遊んだであろうLINE</span></td></tr>
+                        </table>
                     </div>
                 </div>
 
-                <!-- Message Card 2 (Placeholder) -->
-                <div class="message-card reveal" style="transition-delay: 0.1s;">
-                    <div class="friend-profile">
-                        <h3 class="friend-name">友人 名前入力</h3>
-                        <table class="friend-details">
-                            <tr>
-                                <th>総評</th>
-                                <td>ここに関係性を入力</td>
-                            </tr>
-                            <tr>
-                                <th>友好度</th>
-                                <td class="stars">★★★★☆</td>
-                            </tr>
-                            <tr>
-                                <th>最終連絡</th>
-                                <td><span class="contact-date">YYYY.MM.DD</span><span
-                                        class="contact-note">連絡内容のメモスニペット</span></td>
-                            </tr>
-                        </table>
+                <!-- Message Card 2 -->
+                <div class="message-card reveal" style="transition-delay: 0.1s;" onclick="this.classList.toggle('expanded')">
+                    <div class="message-summary">
+                        <p class="message-text">"お祝いのメッセージ内容をここに入力してください。"</p>
+                        <p class="message-author">- 友人 名前</p>
+                        <span class="expand-hint">▼ tap to see profile</span>
                     </div>
-                    <div class="friend-message">
-                        <p>「お祝いのメッセージ内容をここに入力してください。」</p>
+                    <div class="friend-profile-content">
+                        <table class="friend-details">
+                            <tr><th>総評</th><td>ここに関係性を入力</td></tr>
+                            <tr><th>友好度</th><td class="stars">★★★★☆</td></tr>
+                            <tr><th>最終連絡</th><td><span class="contact-date">YYYY.MM.DD</span><span class="contact-note">連絡ログのメモ</span></td></tr>
+                        </table>
                     </div>
                 </div>
 
-                <!-- Message Card 3 (Placeholder) -->
-                <div class="message-card reveal" style="transition-delay: 0.2s;">
-                    <div class="friend-profile">
-                        <h3 class="friend-name">友人 名前入力</h3>
-                        <table class="friend-details">
-                            <tr>
-                                <th>総評</th>
-                                <td>ここに関係性を入力</td>
-                            </tr>
-                            <tr>
-                                <th>友好度</th>
-                                <td class="stars">★★★☆☆</td>
-                            </tr>
-                            <tr>
-                                <th>最終連絡</th>
-                                <td><span class="contact-date">YYYY.MM.DD</span><span
-                                        class="contact-note">連絡内容のメモスニペット</span></td>
-                            </tr>
-                        </table>
+                <!-- Message Card 3 -->
+                <div class="message-card reveal" style="transition-delay: 0.2s;" onclick="this.classList.toggle('expanded')">
+                    <div class="message-summary">
+                        <p class="message-text">"お祝いのメッセージ内容をここに入力してください。"</p>
+                        <p class="message-author">- 友人 名前</p>
+                        <span class="expand-hint">▼ tap to see profile</span>
                     </div>
-                    <div class="friend-message">
-                        <p>「お祝いのメッセージ内容をここに入力してください。」</p>
+                    <div class="friend-profile-content">
+                        <table class="friend-details">
+                            <tr><th>総評</th><td>ここに関係性を入力</td></tr>
+                            <tr><th>友好度</th><td class="stars">★★★★☆</td></tr>
+                            <tr><th>最終連絡</th><td><span class="contact-date">YYYY.MM.DD</span><span class="contact-note">連絡ログのメモ</span></td></tr>
+                        </table>
                     </div>
                 </div>
 
-                <!-- Message Card 4 (Placeholder) -->
-                <div class="message-card reveal" style="transition-delay: 0.3s;">
-                    <div class="friend-profile">
-                        <h3 class="friend-name">友人 名前入力</h3>
-                        <table class="friend-details">
-                            <tr>
-                                <th>総評</th>
-                                <td>ここに関係性を入力</td>
-                            </tr>
-                            <tr>
-                                <th>友好度</th>
-                                <td class="stars">★★★★★</td>
-                            </tr>
-                            <tr>
-                                <th>最終連絡</th>
-                                <td><span class="contact-date">YYYY.MM.DD</span><span
-                                        class="contact-note">連絡内容のメモスニペット</span></td>
-                            </tr>
-                        </table>
+                <!-- Message Card 4 -->
+                <div class="message-card reveal" style="transition-delay: 0.3s;" onclick="this.classList.toggle('expanded')">
+                    <div class="message-summary">
+                        <p class="message-text">"お祝いのメッセージ内容をここに入力してください。"</p>
+                        <p class="message-author">- 友人 名前</p>
+                        <span class="expand-hint">▼ tap to see profile</span>
                     </div>
-                    <div class="friend-message">
-                        <p>「お祝いのメッセージ内容をここに入力してください。」</p>
+                    <div class="friend-profile-content">
+                        <table class="friend-details">
+                            <tr><th>総評</th><td>ここに関係性を入力</td></tr>
+                            <tr><th>友好度</th><td class="stars">★★★★☆</td></tr>
+                            <tr><th>最終連絡</th><td><span class="contact-date">YYYY.MM.DD</span><span class="contact-note">連絡ログのメモ</span></td></tr>
+                        </table>
                     </div>
                 </div>
 
-                <!-- Message Card 5 (Placeholder) -->
-                <div class="message-card reveal" style="transition-delay: 0.4s;">
-                    <div class="friend-profile">
-                        <h3 class="friend-name">友人 名前入力</h3>
-                        <table class="friend-details">
-                            <tr>
-                                <th>総評</th>
-                                <td>ここに関係性を入力</td>
-                            </tr>
-                            <tr>
-                                <th>友好度</th>
-                                <td class="stars">★★★★☆</td>
-                            </tr>
-                            <tr>
-                                <th>最終連絡</th>
-                                <td><span class="contact-date">YYYY.MM.DD</span><span
-                                        class="contact-note">連絡内容のメモスニペット</span></td>
-                            </tr>
-                        </table>
+                <!-- Message Card 5 -->
+                <div class="message-card reveal" style="transition-delay: 0.4s;" onclick="this.classList.toggle('expanded')">
+                    <div class="message-summary">
+                        <p class="message-text">"お祝いのメッセージ内容をここに入力してください。"</p>
+                        <p class="message-author">- 友人 名前</p>
+                        <span class="expand-hint">▼ tap to see profile</span>
                     </div>
-                    <div class="friend-message">
-                        <p>「お祝いのメッセージ内容をここに入力してください。」</p>
+                    <div class="friend-profile-content">
+                        <table class="friend-details">
+                            <tr><th>総評</th><td>ここに関係性を入力</td></tr>
+                            <tr><th>友好度</th><td class="stars">★★★★☆</td></tr>
+                            <tr><th>最終連絡</th><td><span class="contact-date">YYYY.MM.DD</span><span class="contact-note">連絡ログのメモ</span></td></tr>
+                        </table>
                     </div>
                 </div>
 
-                <!-- Message Card 6 (Placeholder) -->
-                <div class="message-card reveal" style="transition-delay: 0.5s;">
-                    <div class="friend-profile">
-                        <h3 class="friend-name">友人 名前入力</h3>
-                        <table class="friend-details">
-                            <tr>
-                                <th>総評</th>
-                                <td>ここに関係性を入力</td>
-                            </tr>
-                            <tr>
-                                <th>友好度</th>
-                                <td class="stars">★★★★★</td>
-                            </tr>
-                            <tr>
-                                <th>最終連絡</th>
-                                <td><span class="contact-date">YYYY.MM.DD</span><span
-                                        class="contact-note">連絡内容のメモスニペット</span></td>
-                            </tr>
-                        </table>
+                <!-- Message Card 6 -->
+                <div class="message-card reveal" style="transition-delay: 0.5s;" onclick="this.classList.toggle('expanded')">
+                    <div class="message-summary">
+                        <p class="message-text">"お祝いのメッセージ内容をここに入力してください。"</p>
+                        <p class="message-author">- 友人 名前</p>
+                        <span class="expand-hint">▼ tap to see profile</span>
                     </div>
-                    <div class="friend-message">
-                        <p>「お祝いのメッセージ内容をここに入力してください。」</p>
+                    <div class="friend-profile-content">
+                        <table class="friend-details">
+                            <tr><th>総評</th><td>ここに関係性を入力</td></tr>
+                            <tr><th>友好度</th><td class="stars">★★★★☆</td></tr>
+                            <tr><th>最終連絡</th><td><span class="contact-date">YYYY.MM.DD</span><span class="contact-note">連絡ログのメモ</span></td></tr>
+                        </table>
                     </div>
                 </div>
 
-                <!-- Message Card 7 (Placeholder) -->
-                <div class="message-card reveal" style="transition-delay: 0.6s;">
-                    <div class="friend-profile">
-                        <h3 class="friend-name">友人 名前入力</h3>
-                        <table class="friend-details">
-                            <tr>
-                                <th>総評</th>
-                                <td>ここに関係性を入力</td>
-                            </tr>
-                            <tr>
-                                <th>友好度</th>
-                                <td class="stars">★★★★★</td>
-                            </tr>
-                            <tr>
-                                <th>最終連絡</th>
-                                <td><span class="contact-date">YYYY.MM.DD</span><span
-                                        class="contact-note">連絡内容のメモスニペット</span></td>
-                            </tr>
-                        </table>
+                <!-- Message Card 7 -->
+                <div class="message-card reveal" style="transition-delay: 0.6s;" onclick="this.classList.toggle('expanded')">
+                    <div class="message-summary">
+                        <p class="message-text">"お祝いのメッセージ内容をここに入力してください。"</p>
+                        <p class="message-author">- 友人 名前</p>
+                        <span class="expand-hint">▼ tap to see profile</span>
                     </div>
-                    <div class="friend-message">
-                        <p>「お祝いのメッセージ内容をここに入力してください。」</p>
+                    <div class="friend-profile-content">
+                        <table class="friend-details">
+                            <tr><th>総評</th><td>ここに関係性を入力</td></tr>
+                            <tr><th>友好度</th><td class="stars">★★★★☆</td></tr>
+                            <tr><th>最終連絡</th><td><span class="contact-date">YYYY.MM.DD</span><span class="contact-note">連絡ログのメモ</span></td></tr>
+                        </table>
                     </div>
                 </div>
             </div>
