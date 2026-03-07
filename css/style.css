@@ -263,16 +263,68 @@ h3 {
   box-shadow: 0 12px 40px 0 rgba(0, 210, 255, 0.2);
 }
 
-.message-text {
-  font-size: 1.1rem;
-  font-style: italic;
+.friend-profile {
   margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.2);
 }
 
-.message-author {
-  text-align: right;
-  font-weight: bold;
+.friend-name {
+  font-size: 1.5rem;
   color: var(--accent);
+  margin-bottom: 15px;
+  letter-spacing: 2px;
+}
+
+.friend-details {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.friend-details th {
+  text-align: left;
+  vertical-align: top;
+  padding: 5px 15px 5px 0;
+  color: rgba(255, 255, 255, 0.6);
+  white-space: nowrap;
+  font-weight: normal;
+}
+
+.friend-details td {
+  padding: 5px 0;
+  color: #fff;
+  line-height: 1.4;
+}
+
+.stars {
+  color: #f2d06b;
+  letter-spacing: 2px;
+}
+
+.contact-date {
+  display: block;
+  font-family: monospace;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 5px;
+  font-size: 0.9rem;
+}
+
+.contact-note {
+  display: block;
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.7);
+  background: rgba(0, 0, 0, 0.3);
+  padding: 8px 10px;
+  border-radius: 5px;
+  border-left: 3px solid var(--accent);
+}
+
+.friend-message {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  font-style: italic;
+  padding-top: 10px;
 }
 
 /* --- Gallery styles removed --- */
